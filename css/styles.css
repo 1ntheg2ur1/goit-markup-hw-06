@@ -290,8 +290,12 @@ img {
   color: var(--logo-part-color);
 }
 
-.modal-form-label {
-
+.modal-text {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--secondary-text-color);
 }
 
 /* Переваги */
