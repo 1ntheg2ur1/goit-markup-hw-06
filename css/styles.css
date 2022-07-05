@@ -285,8 +285,7 @@ img {
 }
 
 .data-modal-close:hover {
-  color: #ffffff;
-  background-color: var(--logo-part-color);
+  color: var(--logo-part-color);
 }
 
 /* Переваги */
