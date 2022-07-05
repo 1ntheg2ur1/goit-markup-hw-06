@@ -641,7 +641,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   align-self: flex-end;
 
   font-weight: 700;
@@ -659,20 +659,10 @@ img {
   border-color: transparent;
   cursor: pointer;
   fill: #FFFFFF;
-  
-  transform: scale(1);
-  transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .svg-send-icon {
   margin-left: 10px;
-}
-
-.subscribe-button:hover,
-.subscribe-button:focus {
-  transform: scale(1.05);
 }
 
 /* Налаштування кнопок в Portfolio */
