@@ -637,6 +637,12 @@ img {
   background-color: transparent;
 }
 
+.subscribe-input:hover,
+.subscribe-input:focus {
+background-color: var(--main-color);
+color: var(--secondary-text-color);
+}
+
 .subscribe-button {
   display: flex;
   align-items: center;
