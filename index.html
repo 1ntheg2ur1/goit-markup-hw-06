@@ -465,6 +465,7 @@
                 name="mail"
                 id="subscribe"
                 placeholder="E-mail"
+                autocomplete="on"
               />
             </div>
             <button class="subscribe-button" type="submit">
@@ -479,6 +480,11 @@
     </main>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
+        <div role="group" aria-labelledby="modal-form-label">
+          <p class="modal" id="modal-form-label">
+            Оставьте свои данные, мы вам перезвоним
+          </p>
+        </div>
         <button class="data-modal-close" data-modal-close>
           <svg class="svg-close-icon" width="11" height="11">
             <use href="./images/sprite/icons.svg#icon-cancel"></use>
