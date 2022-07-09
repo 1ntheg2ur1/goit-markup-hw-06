@@ -176,15 +176,14 @@ img {
   margin-bottom: 30px;
 }
 
-.hero-button {
+.hero-button,
+.submit-button {
   display: block;
   width: 200px;
   height: 50px;
   margin-left: auto;
   margin-right: auto;
 
-  font-family: var(--main-font), sans-serif;
-  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -206,7 +205,9 @@ img {
 .hero-button:hover,
 .hero-button:focus,
 .subscribe-button:hover,
-.subscribe-button:focus {
+.subscribe-button:focus,
+.submit-button:hover,
+.submit-button:focus {
   background-color: #188ce8;
 }
 
@@ -296,11 +297,130 @@ img {
   line-height: 1.15;
   text-align: center;
   color: var(--secondary-text-color);
+
+  margin-bottom: 12px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+
+  padding: 40px;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+  padding-right: 12px;
+  border-radius: 4px;
+  border: 1px solid;
+  border-color: rgba(33, 33, 33, 0.2);
+  outline: transparent;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-label {
+  display: block;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  margin-bottom: 4px;
+}
+
+.modal-cont {
+  position: relative;
+
+  margin-bottom: 10px;
+}
+
+.modal-icon {
+  display: block;
+  position: absolute;
+
+  fill: #212121;
+
+  top: 50%;
+  left: 12px;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-textarea {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  resize: none;
+  border: 1px solid;
+  border-color: rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+
+  transition: font-size, line-height;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-textarea:focus::placeholder {
+  font-size: 14px;
+  line-height: 1.14;
+}
+
+.modal-agreement {
+  text-decoration-line: underline;
+  color: var(--logo-part-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-agreement:hover {
+  color: #188ce8;
+}
+
+.submit-button {
+  margin-top: 30px;
+}
+
+.modal-input:focus + .modal-icon,
+.modal-input:focus,
+.modal-textarea:focus {
+  fill: var(--logo-part-color);
+  border-color: var(--logo-part-color);
+}
+
+.modal-check {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chechbox-input-text {
+
 }
 
 /* Переваги */
 
-.visually-hidden {
+.visually-hidden, .chechbox-input {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -613,7 +733,9 @@ img {
   margin-right: 12px;
 }
 
-
+.subscribe-input:not(:placeholder-shown) {
+  color: #ffffff;
+}
 
 .subscribe-mailing-list {
   font-weight: 700;
@@ -627,7 +749,7 @@ img {
 
 .subscribe-input {
   align-items: center;
-  
+
   color: rgba(255, 255, 255, 0.6);
   font-size: 16px;
   line-height: 1.25;
@@ -643,12 +765,6 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); */
   background-color: transparent;
-}
-
-.subscribe-input:hover,
-.subscribe-input:focus {
-background-color: var(--main-color);
-color: var(--secondary-text-color);
 }
 
 .subscribe-button {
@@ -672,7 +788,11 @@ color: var(--secondary-text-color);
   border-radius: 4px;
   border-color: transparent;
   cursor: pointer;
-  fill: #FFFFFF;
+  fill: #ffffff;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .svg-send-icon {
@@ -833,7 +953,6 @@ color: var(--secondary-text-color);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-
 
 /* Властивості hover та focus на всі посилання*/
 
