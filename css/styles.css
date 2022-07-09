@@ -410,17 +410,35 @@ img {
 }
 
 .modal-check {
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
-.chechbox-input-text {
+.icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
 
+  border: 2px solid var(--secondary-text-color);
+  border-radius: 2px;
+  background-color: var(--main-color);
+}
+
+.chechbox-input:checked + .icon {
+  
+  background-image: url(../images/sprite/icon-check.svg);
+  background-color: var(--logo-part-color);
+  background-size: contain; 
+  border-color: transparent;
 }
 
 /* Переваги */
 
-.visually-hidden, .chechbox-input {
+.visually-hidden,
+.chechbox-input { 
   position: absolute;
   width: 1px;
   height: 1px;
