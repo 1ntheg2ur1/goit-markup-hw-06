@@ -339,6 +339,7 @@ img {
 }
 
 .modal-input-thumb {
+  display: block;
   position: relative;
 }
 
